@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shah Mohammad Baheej | Cybersecurity & Network Engineer</title>
+    <title>Shah Mohammad Baheej | Senior Network Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
@@ -14,30 +14,17 @@
 
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: #0a0e17;
-            color: #e2e8f0;
             line-height: 1.6;
+            color: #1e293b;
+            background: #f8fafc;
         }
 
         /* Hero */
         .hero {
-            background: linear-gradient(160deg, #0a0e17 0%, #0f172a 50%, #0c1a2e 100%);
-            padding: 80px 20px 90px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            padding: 70px 20px 80px;
             text-align: center;
-            border-bottom: 1px solid #1e293b;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(0, 255, 157, 0.08) 0%, transparent 60%);
-            pointer-events: none;
         }
 
         .profile-img {
@@ -45,42 +32,38 @@
             height: 170px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #00ff9d;
-            box-shadow: 0 0 25px rgba(0, 255, 157, 0.35);
+            border: 4px solid #3b82f6;
             margin-bottom: 25px;
-            position: relative;
-            z-index: 1;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         .hero h1 {
-            font-size: 2.7rem;
+            font-size: 2.6rem;
             font-weight: 700;
-            color: #f8fafc;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
+            margin-bottom: 10px;
         }
 
         .roles {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #94a3b8;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .roles span {
-            color: #00ff9d;
+            color: #60a5fa;
             margin: 0 8px;
         }
 
         .hero-desc {
             max-width: 680px;
-            margin: 0 auto 32px;
-            color: #94a3b8;
+            margin: 0 auto 30px;
+            color: #cbd5e1;
             font-size: 1.05rem;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 14px;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -89,7 +72,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 13px 28px;
+            padding: 12px 26px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
@@ -97,41 +80,39 @@
         }
 
         .btn-primary {
-            background: #00ff9d;
-            color: #0a0e17;
+            background: #3b82f6;
+            color: white;
         }
 
         .btn-primary:hover {
-            background: #00e68a;
-            box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+            background: #2563eb;
             transform: translateY(-2px);
         }
 
         .btn-outline {
             background: transparent;
-            color: #00ff9d;
-            border: 1.5px solid #00ff9d;
+            color: white;
+            border: 2px solid #64748b;
         }
 
         .btn-outline:hover {
-            background: rgba(0, 255, 157, 0.1);
-            box-shadow: 0 0 15px rgba(0, 255, 157, 0.25);
+            border-color: #3b82f6;
+            color: #60a5fa;
         }
 
         /* Sections */
         section {
-            max-width: 1050px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 70px 20px;
+            padding: 60px 20px;
         }
 
         h2 {
             font-size: 1.8rem;
-            color: #f1f5f9;
-            margin-bottom: 30px;
+            color: #0f172a;
+            margin-bottom: 28px;
             position: relative;
             padding-bottom: 12px;
-            display: inline-block;
         }
 
         h2::after {
@@ -139,41 +120,41 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
+            width: 55px;
             height: 3px;
-            background: #00ff9d;
+            background: #3b82f6;
             border-radius: 2px;
         }
 
         .card {
-            background: #111827;
-            border: 1px solid #1e293b;
+            background: white;
             border-radius: 12px;
-            padding: 26px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
             margin-bottom: 18px;
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
-            border-color: #00ff9d33;
-            box-shadow: 0 0 20px rgba(0, 255, 157, 0.08);
             transform: translateY(-3px);
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08);
         }
 
         .card h3 {
             font-size: 1.2rem;
-            color: #00ff9d;
+            color: #1e40af;
             margin-bottom: 6px;
         }
 
         .card .meta {
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             color: #64748b;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .card p, .card li {
-            color: #94a3b8;
+            color: #475569;
             font-size: 0.95rem;
         }
 
@@ -185,38 +166,32 @@
         /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 16px;
         }
 
         .skill-item {
-            background: #111827;
-            border: 1px solid #1e293b;
+            background: white;
+            padding: 20px;
             border-radius: 10px;
-            padding: 22px 18px;
+            border: 1px solid #e2e8f0;
             text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            border-color: #00ff9d55;
-            box-shadow: 0 0 18px rgba(0, 255, 157, 0.1);
         }
 
         .skill-item i {
-            font-size: 1.8rem;
-            color: #00ff9d;
-            margin-bottom: 12px;
+            font-size: 1.7rem;
+            color: #3b82f6;
+            margin-bottom: 10px;
         }
 
         .skill-item h4 {
             font-size: 1.05rem;
-            color: #e2e8f0;
             margin-bottom: 6px;
+            color: #1e293b;
         }
 
         .skill-item p {
-            font-size: 0.87rem;
+            font-size: 0.88rem;
             color: #64748b;
         }
 
@@ -228,31 +203,27 @@
         }
 
         .cert-item {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 10px;
+            background: white;
             padding: 16px 18px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
             display: flex;
             align-items: center;
             gap: 12px;
-            transition: all 0.25s ease;
-        }
-
-        .cert-item:hover {
-            border-color: #00ff9d44;
         }
 
         .cert-item i {
-            color: #00ff9d;
+            color: #3b82f6;
             font-size: 1.2rem;
         }
 
         /* Contact */
         .contact-box {
-            background: #111827;
-            border: 1px solid #1e293b;
+            background: white;
             border-radius: 16px;
-            padding: 45px 30px;
+            padding: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
             text-align: center;
         }
 
@@ -260,43 +231,40 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
-            margin-top: 28px;
+            gap: 14px;
+            margin-top: 25px;
         }
 
         .contact-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #0f172a;
-            color: #00ff9d;
+            background: #f1f5f9;
+            color: #1e40af;
             padding: 12px 20px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
-            border: 1px solid #1e293b;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
         }
 
         .contact-link:hover {
-            background: #00ff9d;
-            color: #0a0e17;
-            border-color: #00ff9d;
-            box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+            background: #3b82f6;
+            color: white;
         }
 
         footer {
             text-align: center;
-            padding: 35px 20px;
-            color: #475569;
+            padding: 30px 20px;
+            color: #94a3b8;
             font-size: 0.9rem;
-            border-top: 1px solid #1e293b;
+            border-top: 1px solid #e2e8f0;
         }
 
         @media (max-width: 600px) {
             .hero h1 { font-size: 2.1rem; }
             .profile-img { width: 140px; height: 140px; }
-            section { padding: 50px 20px; }
+            section { padding: 40px 20px; }
         }
     </style>
 </head>
@@ -309,12 +277,12 @@
         <h1>Shah Mohammad Baheej</h1>
         
         <div class="roles">
-            Cybersecurity Analyst <span>•</span> Network Engineer <span>•</span> University Lecturer
+            Network Specialist <span>•</span> Network Engineer <span>•</span> University Lecturer
         </div>
         
         <p class="hero-desc">
-            Cybersecurity-focused Network Engineer and University Lecturer with over 5 years of experience 
-            designing secure enterprise infrastructures, implementing defense systems, and training the next generation of IT professionals.
+            Network Specialist and University Lecturer with over 5 years of progressive experience in network administration, 
+            IT infrastructure management, and academic instruction. Specialized in designing secure, scalable enterprise networks.
         </p>
         
         <div class="hero-buttons">
@@ -322,7 +290,7 @@
                 <i class="fas fa-download"></i> Download Resume
             </a>
             <a href="#contact" class="btn btn-outline">
-                <i class="fas fa-shield-alt"></i> Contact Me
+                <i class="fas fa-envelope"></i> Contact Me
             </a>
         </div>
     </header>
@@ -330,14 +298,14 @@
     <!-- About -->
     <section>
         <h2>About Me</h2>
-        <p style="color:#94a3b8; font-size:1.05rem; margin-bottom:16px;">
-            I am a Cybersecurity Analyst and Network Engineer with more than 5 years of hands-on experience in designing, 
-            securing, and managing enterprise network infrastructures. My work focuses on building resilient systems, 
-            implementing strong security controls, and ensuring high availability.
+        <p style="color:#475569; font-size:1.05rem; margin-bottom:14px;">
+            I am a Network Specialist and University Lecturer with more than 5 years of experience in designing, implementing, 
+            and maintaining secure and high-performance network systems. I have worked across government, service providers, 
+            research institutions, and higher education sectors.
         </p>
-        <p style="color:#94a3b8; font-size:1.05rem;">
-            Alongside industry practice, I serve as a University Lecturer at Jahan University, teaching Network Security, 
-            Routing & Switching, and Cisco technologies — bridging real-world cybersecurity expertise with academic excellence.
+        <p style="color:#475569; font-size:1.05rem;">
+            Currently working as a Network Specialist at MOD while also serving as a University Lecturer at Jahan University, 
+            bringing real-world industry experience into the classroom.
         </p>
     </section>
 
@@ -345,13 +313,27 @@
     <section>
         <h2>Professional Experience</h2>
 
+        <!-- New Role -->
+        <div class="card">
+            <h3>Network Specialist</h3>
+            <div class="meta">Ministry of Defense (MOD) • July 2026 – Present</div>
+            <ul>
+                <li>Designing, implementing, and maintaining secure and high-availability network infrastructure</li>
+                <li>Configuring and managing enterprise routers, switches, firewalls, and wireless systems</li>
+                <li>Implementing network security policies, access control, and monitoring solutions</li>
+                <li>Troubleshooting complex network issues and ensuring continuous operational readiness</li>
+                <li>Supporting critical network services and coordinating with technical teams for infrastructure upgrades</li>
+                <li>Documenting network configurations, procedures, and security standards</li>
+            </ul>
+        </div>
+
         <div class="card">
             <h3>University Lecturer</h3>
             <div class="meta">Jahan University, Kabul • Feb 2026 – Present (Part-time)</div>
             <ul>
-                <li>Teaching Network Security, Routing & Switching, and Cisco CCNA courses</li>
-                <li>Delivering practical lab training on TCP/IP, VLANs, subnetting, and security fundamentals</li>
-                <li>Guiding students through hands-on cybersecurity and networking projects</li>
+                <li>Teaching Network Routing & Switching, Network Security, and Cisco CCNA courses</li>
+                <li>Delivering theoretical and practical lab training on TCP/IP, subnetting, VLANs, and routing protocols</li>
+                <li>Preparing course materials, conducting assessments, and guiding student projects</li>
             </ul>
         </div>
 
@@ -359,11 +341,11 @@
             <h3>Network Engineer</h3>
             <div class="meta">Technical and Technology Research Administration (TTRA) • April 2022 – June 2025</div>
             <ul>
-                <li>Designed and secured LAN/WAN infrastructures including firewalls, VPNs, and wireless networks</li>
-                <li>Configured Cisco ASA, next-generation firewalls, and site-to-site VPN solutions</li>
-                <li>Implemented advanced routing (OSPF, EIGRP, BGP) and network segmentation</li>
-                <li>Deployed enterprise CCTV + biometric security systems (100+ cameras)</li>
-                <li>Led technical teams during critical infrastructure upgrades and security hardening</li>
+                <li>Designed, implemented, and managed LAN/WAN infrastructure including routers, switches, firewalls, and wireless networks</li>
+                <li>Configured Cisco, MikroTik, Starlink, and next-generation firewall solutions</li>
+                <li>Implemented routing protocols (OSPF, EIGRP, BGP) and site-to-site VPNs</li>
+                <li>Deployed IP telephony solutions and large-scale CCTV surveillance systems</li>
+                <li>Led technical teams during network deployments and infrastructure upgrades</li>
             </ul>
         </div>
 
@@ -371,9 +353,9 @@
             <h3>Network Support Engineer</h3>
             <div class="meta">Sky Connect Internet Service Company • Jan 2021 – Feb 2022</div>
             <ul>
-                <li>Configured and secured routers, switches, firewalls, and point-to-point links</li>
+                <li>Installed, configured, and troubleshot routers, switches, firewalls, and PtP links</li>
                 <li>Managed Cisco and MikroTik devices in ISP environments</li>
-                <li>Implemented VLANs, NAT, VPN, and firewall security policies</li>
+                <li>Configured VLANs, NAT, DHCP, DNS, VPN, and firewall policies</li>
             </ul>
         </div>
     </section>
@@ -400,69 +382,69 @@
         <h2>Key Projects</h2>
 
         <div class="card">
-            <h3>Enterprise Network Design & Security – TTRA</h3>
-            <div class="meta">Supporting 300+ users • Full infrastructure deployment</div>
-            <p>Designed and deployed a complete secure enterprise network with fiber backbone, Cisco routers/switches, ASA 5545 firewall, 30 wireless APs, and 50 IP phones. Implemented VLAN segmentation, advanced routing, and security hardening.</p>
+            <h3>Enterprise Network Design & Deployment – TTRA</h3>
+            <div class="meta">Network Engineer • Supporting 300+ users</div>
+            <p>Designed and deployed complete enterprise network infrastructure using fiber optic backbone, Cisco routers (3850/3650/3750), ASA 5545 firewall, 30 wireless access points, and 50 Cisco IP phones. Implemented VLANs, routing protocols (RIP, OSPF, EIGRP), and security best practices.</p>
         </div>
 
         <div class="card">
-            <h3>Large-Scale CCTV & Biometric Security System</h3>
-            <div class="meta">100 Network Cameras + Central Monitoring</div>
-            <p>Architected and deployed an IP-based surveillance system with 100 cameras and biometric access control across multiple locations, integrated with 5 monitoring rooms for centralized security operations.</p>
+            <h3>CCTV Surveillance System – TTRA</h3>
+            <div class="meta">100 Network Cameras + Biometric System</div>
+            <p>Designed and deployed a large-scale IP-based CCTV system with 100 cameras across multiple locations and 5 monitoring rooms for centralized security management.</p>
         </div>
 
         <div class="card">
-            <h3>IoT Network Scalability Research</h3>
+            <h3>Network Scalability in IoT Deployments</h3>
             <div class="meta">Research Project • Jahan University</div>
-            <p>Investigated scalability, security, and interoperability challenges in large-scale IoT deployments, focusing on congestion control, device management, and network defense strategies.</p>
+            <p>Conducted research on network scalability challenges in large-scale IoT environments, focusing on congestion, device management, addressing, interoperability, and security.</p>
         </div>
     </section>
 
     <!-- Skills -->
     <section>
-        <h2>Core Expertise</h2>
+        <h2>Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-item">
-                <i class="fas fa-shield-alt"></i>
-                <h4>Cybersecurity</h4>
-                <p>Firewall, VPN, IDS concepts, Security Hardening</p>
-            </div>
-            <div class="skill-item">
                 <i class="fas fa-network-wired"></i>
-                <h4>Network Engineering</h4>
-                <p>OSPF, EIGRP, BGP, VLANs, Layer 3 Switching</p>
+                <h4>Routing & Switching</h4>
+                <p>OSPF, EIGRP, BGP, RIP, VLANs, Layer 3</p>
             </div>
             <div class="skill-item">
-                <i class="fas fa-lock"></i>
-                <h4>Security Infrastructure</h4>
-                <p>Cisco ASA, Next-Gen Firewall, Site-to-Site VPN</p>
+                <i class="fas fa-shield-alt"></i>
+                <h4>Network Security</h4>
+                <p>Firewall, VPN, Cisco ASA, Endpoint Security</p>
             </div>
             <div class="skill-item">
                 <i class="fas fa-server"></i>
-                <h4>Enterprise Systems</h4>
+                <h4>Infrastructure</h4>
                 <p>Cisco, MikroTik, Starlink, Virtualization</p>
             </div>
             <div class="skill-item">
+                <i class="fas fa-phone"></i>
+                <h4>IP Telephony</h4>
+                <p>Cisco IP Phones, VoIP Solutions</p>
+            </div>
+            <div class="skill-item">
                 <i class="fas fa-video"></i>
-                <h4>Surveillance & Access</h4>
-                <p>CCTV Design, Biometric Systems, Monitoring</p>
+                <h4>Surveillance Systems</h4>
+                <p>CCTV Design & Deployment, Biometric</p>
             </div>
             <div class="skill-item">
                 <i class="fas fa-chalkboard-teacher"></i>
-                <h4>Academic Instruction</h4>
-                <p>Network Security, CCNA, Lab Mentorship</p>
+                <h4>Teaching</h4>
+                <p>CCNA, Network Security, Lab Instruction</p>
             </div>
         </div>
     </section>
 
     <!-- Certificates -->
     <section>
-        <h2>Certifications</h2>
+        <h2>Certificates</h2>
         <div class="certs-grid">
             <div class="cert-item"><i class="fas fa-certificate"></i> CCNA</div>
             <div class="cert-item"><i class="fas fa-certificate"></i> CCNP Fundamentals</div>
             <div class="cert-item"><i class="fas fa-certificate"></i> Introduction to Cyber Security</div>
-            <div class="cert-item"><i class="fas fa-certificate"></i> Cryptography & Network Security</div>
+            <div class="cert-item"><i class="fas fa-certificate"></i> Introduction to Cryptography & Network Security</div>
             <div class="cert-item"><i class="fas fa-certificate"></i> English for IT 1 & 2</div>
             <div class="cert-item"><i class="fas fa-certificate"></i> IT for Business Success</div>
             <div class="cert-item"><i class="fas fa-certificate"></i> Network Workshop</div>
@@ -474,8 +456,8 @@
     <section id="contact">
         <h2>Get In Touch</h2>
         <div class="contact-box">
-            <p style="color:#94a3b8; margin-bottom:8px;">
-                Open to cybersecurity roles, network engineering opportunities, collaborations, and academic discussions.
+            <p style="color:#475569; margin-bottom:8px;">
+                Feel free to reach out for professional opportunities, collaboration, or academic discussions.
             </p>
             <p style="color:#64748b; font-size:0.95rem;">Kabul, Afghanistan</p>
             
@@ -503,7 +485,7 @@
     </section>
 
     <footer>
-        © 2026 Shah Mohammad Baheej — Cybersecurity Analyst | Network Engineer | University Lecturer
+        © 2026 Shah Mohammad Baheej — Network Specialist | Network Engineer | University Lecturer
     </footer>
 
 </body>
