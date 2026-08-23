@@ -1,26 +1,244 @@
-index.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baheej | Network Engineer & IT Professional</title>
-</head>
+    <title>Shahmohammad Baheej | Network Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background-color: #f8fafc;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .title {
+            font-size: 1.3rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        /* Sections */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #0f172a;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+
+        /* About */
+        .about p {
+            color: #475569;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .skill-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #1e40af;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Contact */
+        .contact {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .hero .title {
+                font-size: 1.1rem;
+            }
+            section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
 <body>
 
-    <h1>Welcome to My Personal Website</h1>
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Shahmohammad Baheej</h1>
+        <div class="title">Network Engineer & IT Professional</div>
+        <p>
+            Passionate about networking, IT infrastructure, and cybersecurity. 
+            Continuously learning and building practical skills to solve real-world problems.
+        </p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </header>
 
-    <h2>Shahmohammad Baheej</h2>
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm Shahmohammad Baheej, a Network Engineer and IT Professional focused on building 
+            reliable, secure, and efficient network systems.
+        </p>
+        <p>
+            This website showcases my professional journey, technical skills, projects, and continuous 
+            learning in the fields of networking, information technology, and cybersecurity.
+        </p>
+    </section>
 
-    <p>
-        Network Engineer & IT Professional
-    </p>
+    <!-- Skills Section -->
+    <section>
+        <h2>Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Networking</h3>
+                <p>TCP/IP, Routing & Switching, VLANs, Subnetting, Network Design</p>
+            </div>
+            <div class="skill-card">
+                <h3>Network Security</h3>
+                <p>Firewalls, VPN, Access Control, Basic Security Best Practices</p>
+            </div>
+            <div class="skill-card">
+                <h3>IT Infrastructure</h3>
+                <p>System Administration, Troubleshooting, Hardware & Software Support</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools & Technologies</h3>
+                <p>Cisco, Wireshark, Linux basics, Windows Server, Monitoring tools</p>
+            </div>
+        </div>
+    </section>
 
-    <p>
-        Welcome to my personal website. This website represents
-        my professional journey, skills, projects, and continuous
-        learning in networking, IT, and cybersecurity.
-    </p>
+    <!-- Contact Section -->
+    <section>
+        <div class="contact" id="contact">
+            <h2 style="text-align: center; margin-bottom: 15px;">Contact</h2>
+            <p>Feel free to reach out for collaboration, opportunities, or just to connect.</p>
+            <p>
+                <!-- You can update these later with your real links -->
+                Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+                LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a><br>
+                GitHub: <a href="https://github.com/baheej99" target="_blank">github.com/baheej99</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Shahmohammad Baheej — Built with GitHub Pages
+    </footer>
 
 </body>
 </html>
