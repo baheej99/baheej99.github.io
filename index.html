@@ -20,34 +20,57 @@
       background: #f8fafc;
     }
 
-    /* Hero */
+    /* Hero with new background & glassmorphism */
     .hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      background: linear-gradient(145deg, #0b1a33 0%, #1a3a5c 100%);
       color: white;
       padding: 70px 20px 80px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .profile-img {
       width: 170px;
       height: 170px;
-      border-radius: 50%;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
       object-fit: cover;
-      border: 4px solid #3b82f6;
+      border: 4px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(59, 130, 246, 0.3);
       margin-bottom: 25px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background: #1e3a5f;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.02) rotate(2deg);
+      box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.7), 0 0 0 4px #3b82f6;
     }
 
     .hero h1 {
       font-size: 2.6rem;
       font-weight: 700;
       margin-bottom: 10px;
+      letter-spacing: -0.5px;
     }
 
     .roles {
       font-size: 1.15rem;
       color: #94a3b8;
       margin-bottom: 18px;
+      font-weight: 400;
     }
 
     .roles span {
@@ -55,11 +78,42 @@
       margin: 0 8px;
     }
 
-    .hero-desc {
-      max-width: 680px;
+    /* NEW BIO – enhanced styling */
+    .hero-bio {
+      max-width: 760px;
       margin: 0 auto 30px;
-      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      padding: 24px 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      color: #e6edf5;
       font-size: 1.05rem;
+      line-height: 1.7;
+      transition: 0.3s;
+    }
+
+    .hero-bio:hover {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    .hero-bio strong {
+      color: #93c5fd;
+      font-weight: 600;
+    }
+
+    .hero-bio i {
+      color: #60a5fa;
+      margin-right: 6px;
+    }
+
+    .hero-bio .highlight {
+      color: #fcd34d;
+      font-weight: 500;
     }
 
     .hero-buttons {
@@ -67,6 +121,8 @@
       gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
 
     .btn {
@@ -90,6 +146,7 @@
     .btn-primary:hover {
       background: #2563eb;
       transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(59, 130, 246, 0.4);
     }
 
     .btn-outline {
@@ -101,6 +158,7 @@
     .btn-outline:hover {
       border-color: #3b82f6;
       color: #60a5fa;
+      background: rgba(59, 130, 246, 0.08);
     }
 
     /* Sections */
@@ -221,7 +279,7 @@
       font-size: 1.2rem;
     }
 
-    /* Document viewer (PDF inline) */
+    /* Document viewer */
     .doc-viewer {
       background: #f1f5f9;
       border-radius: 12px;
@@ -302,6 +360,10 @@
       display: block;
     }
 
+    .hidden-viewer {
+      display: none;
+    }
+
     /* Contact */
     .contact-box {
       background: white;
@@ -357,21 +419,13 @@
       section {
         padding: 40px 20px;
       }
-      .doc-viewer iframe {
-        height: 240px;
-      }
-      .inline-viewer iframe {
-        height: 200px;
+      .hero-bio {
+        padding: 18px 16px;
+        font-size: 0.98rem;
       }
     }
 
-    /* toggle visibility */
-    .viewer-toggle {
-      margin-top: 10px;
-    }
-    .hidden-viewer {
-      display: none;
-    }
+    /* toggle viewer button icon */
     .doc-card .btn-outline-small i {
       margin-right: 4px;
     }
@@ -386,10 +440,21 @@
     <div class="roles">
       IT Specialist <span>•</span> Senior Network Engineer <span>•</span> Cybersecurity Analyst <span>•</span> University Lecturer
     </div>
-    <p class="hero-desc">
-      Network Specialist and University Lecturer with over 5 years of progressive experience in network administration,
-      IT infrastructure management, and academic instruction. Specialized in designing secure, scalable enterprise networks.
-    </p>
+
+    <!-- NEW BIO (replaces old hero-desc) -->
+    <div class="hero-bio">
+      <p>
+        <i class="fas fa-quote-left" style="opacity:0.5;"></i>
+        I am an <strong>IT Specialist</strong>, <strong>Senior Network Engineer</strong>, <strong>Cybersecurity Analyst</strong>, and <strong>University Lecturer</strong> with over <span class="highlight">six years</span> of professional experience in network infrastructure, cybersecurity, IT operations, and technical education.
+      </p>
+      <p style="margin-top:12px;">
+        <i class="fas fa-network-wired"></i> I specialize in enterprise networking, Cisco technologies, network security, routing and switching, firewalls, monitoring, and troubleshooting, with a strong focus on building <strong>secure, reliable, and high-performance IT environments</strong>.
+      </p>
+      <p style="margin-top:12px;">
+        <i class="fas fa-chalkboard-teacher"></i> As a university lecturer, I am passionate about sharing practical knowledge, developing IT professionals, and connecting academic learning with real-world technology.
+      </p>
+    </div>
+
     <div class="hero-buttons">
       <a href="resume.pdf" class="btn btn-primary" target="_blank">
         <i class="fas fa-download"></i> Download Resume
@@ -403,7 +468,7 @@
     </div>
   </header>
 
-  <!-- About -->
+  <!-- About section (kept for structure, but bio already updated) -->
   <section>
     <h2>About Me</h2>
     <p style="color:#475569; font-size:1.05rem; margin-bottom:14px;">
@@ -506,7 +571,6 @@
       <p>Conducted research on network scalability challenges in large-scale IoT environments, focusing on congestion, device management, addressing, interoperability, and security.</p>
     </div>
 
-    <!-- NEW 4th PROJECT -->
     <div class="card">
       <h3>Master Plan & Enterprise Network Design – RDRMOD</h3>
       <div class="meta">Network Specialist • RDR MOD</div>
@@ -514,13 +578,12 @@
     </div>
   </section>
 
-  <!-- DOCUMENT CENTER (NEW SECTION) -->
+  <!-- Document Center -->
   <section id="documents">
     <h2><i class="fas fa-folder-open" style="color:#3b82f6; margin-right:8px;"></i> Document Center</h2>
     <p style="color:#475569; margin-bottom:24px;">View my certificates, job experience documents, and ID card online. (PDF viewer – no download required)</p>
 
     <div class="doc-grid">
-      <!-- Technical Certificates -->
       <div class="doc-card">
         <h4><i class="fas fa-certificate" style="color:#3b82f6;"></i> Technical Certificates</h4>
         <p>CCNA, CCNP Fundamentals, Cybersecurity, Cryptography & more</p>
@@ -530,7 +593,6 @@
         </div>
       </div>
 
-      <!-- English Certificates -->
       <div class="doc-card">
         <h4><i class="fas fa-language" style="color:#3b82f6;"></i> English Certificates</h4>
         <p>English for IT 1&2, TEFL 1&2, SLT, KCI Diploma</p>
@@ -540,7 +602,6 @@
         </div>
       </div>
 
-      <!-- Job Experience -->
       <div class="doc-card">
         <h4><i class="fas fa-briefcase" style="color:#3b82f6;"></i> Job Experience</h4>
         <p>Employment letters, reference documents, and experience records</p>
@@ -550,7 +611,6 @@
         </div>
       </div>
 
-      <!-- National ID Card -->
       <div class="doc-card">
         <h4><i class="fas fa-id-card" style="color:#3b82f6;"></i> National ID Card</h4>
         <p>Official identification document</p>
@@ -561,7 +621,6 @@
       </div>
     </div>
 
-    <!-- hidden viewer toggle script (inline) -->
     <script>
       (function() {
         const toggles = document.querySelectorAll('.toggle-viewer');
@@ -571,7 +630,6 @@
             const viewer = document.getElementById(targetId);
             if (viewer) {
               viewer.classList.toggle('hidden-viewer');
-              // change button text
               if (viewer.classList.contains('hidden-viewer')) {
                 this.innerHTML = '<i class="fas fa-eye"></i> View';
               } else {
@@ -584,7 +642,7 @@
     </script>
   </section>
 
-  <!-- Technical Skills (updated) -->
+  <!-- Technical Skills -->
   <section>
     <h2>Technical Skills</h2>
     <div class="skills-grid">
@@ -618,7 +676,6 @@
         <h4>Teaching</h4>
         <p>CCNA, Network Security, Lab</p>
       </div>
-      <!-- NEW SKILLS -->
       <div class="skill-item">
         <i class="fas fa-code"></i>
         <h4>Web Development</h4>
@@ -637,7 +694,7 @@
     </div>
   </section>
 
-  <!-- Certificates (list) -->
+  <!-- Certificates list -->
   <section>
     <h2>Certificates</h2>
     <div class="certs-grid">
@@ -652,7 +709,7 @@
     </div>
   </section>
 
-  <!-- Website link (baheej.xo.je) -->
+  <!-- My Website -->
   <section>
     <h2>My Website</h2>
     <div style="background:white; border-radius:12px; padding:20px 24px; border:1px solid #e2e8f0; display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
