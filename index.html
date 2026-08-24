@@ -20,7 +20,7 @@
       background: #f8fafc;
     }
 
-    /* Hero with new background & glassmorphism */
+    /* Hero with glassmorphism */
     .hero {
       background: linear-gradient(145deg, #0b1a33 0%, #1a3a5c 100%);
       color: white;
@@ -78,7 +78,6 @@
       margin: 0 8px;
     }
 
-    /* NEW BIO – enhanced styling */
     .hero-bio {
       max-width: 760px;
       margin: 0 auto 30px;
@@ -187,6 +186,36 @@
       border-radius: 2px;
     }
 
+    /* About Me section – new style */
+    .about-highlight {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px 36px;
+      box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.06);
+      border-left: 6px solid #3b82f6;
+      color: #1e293b;
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    .about-highlight p {
+      margin-bottom: 1.2rem;
+    }
+
+    .about-highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-highlight strong {
+      color: #1e40af;
+      font-weight: 600;
+    }
+
+    .about-highlight i {
+      color: #3b82f6;
+      margin-right: 4px;
+    }
+
     .card {
       background: white;
       border-radius: 12px;
@@ -280,21 +309,6 @@
     }
 
     /* Document viewer */
-    .doc-viewer {
-      background: #f1f5f9;
-      border-radius: 12px;
-      padding: 12px;
-      margin-top: 12px;
-    }
-
-    .doc-viewer iframe {
-      width: 100%;
-      height: 380px;
-      border: none;
-      border-radius: 8px;
-      background: white;
-    }
-
     .doc-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -423,9 +437,12 @@
         padding: 18px 16px;
         font-size: 0.98rem;
       }
+      .about-highlight {
+        padding: 20px 18px;
+        font-size: 0.95rem;
+      }
     }
 
-    /* toggle viewer button icon */
     .doc-card .btn-outline-small i {
       margin-right: 4px;
     }
@@ -441,17 +458,11 @@
       IT Specialist <span>•</span> Senior Network Engineer <span>•</span> Cybersecurity Analyst <span>•</span> University Lecturer
     </div>
 
-    <!-- NEW BIO (replaces old hero-desc) -->
+    <!-- short hero bio (kept concise) -->
     <div class="hero-bio">
       <p>
         <i class="fas fa-quote-left" style="opacity:0.5;"></i>
-        I am an <strong>IT Specialist</strong>, <strong>Senior Network Engineer</strong>, <strong>Cybersecurity Analyst</strong>, and <strong>University Lecturer</strong> with over <span class="highlight">six years</span> of professional experience in network infrastructure, cybersecurity, IT operations, and technical education.
-      </p>
-      <p style="margin-top:12px;">
-        <i class="fas fa-network-wired"></i> I specialize in enterprise networking, Cisco technologies, network security, routing and switching, firewalls, monitoring, and troubleshooting, with a strong focus on building <strong>secure, reliable, and high-performance IT environments</strong>.
-      </p>
-      <p style="margin-top:12px;">
-        <i class="fas fa-chalkboard-teacher"></i> As a university lecturer, I am passionate about sharing practical knowledge, developing IT professionals, and connecting academic learning with real-world technology.
+        I am an experienced <strong>IT Specialist</strong>, <strong>Senior Network Engineer</strong>, <strong>Cybersecurity Analyst</strong>, and <strong>University Lecturer</strong> with <span class="highlight">six years</span> of experience and a strong background in designing, implementing, securing, and managing modern IT and network infrastructures.
       </p>
     </div>
 
@@ -468,18 +479,29 @@
     </div>
   </header>
 
-  <!-- About section (kept for structure, but bio already updated) -->
+  <!-- About Me – full new text -->
   <section>
     <h2>About Me</h2>
-    <p style="color:#475569; font-size:1.05rem; margin-bottom:14px;">
-      I am a Network Specialist and University Lecturer with more than 5 years of experience in designing, implementing,
-      and maintaining secure and high-performance network systems. I have worked across service providers,
-      research institutions, and higher education sectors.
-    </p>
-    <p style="color:#475569; font-size:1.05rem;">
-      Currently working as a Network Specialist at RDR MOD while also serving as a University Lecturer at Jahan University,
-      bringing real-world industry experience into the classroom.
-    </p>
+    <div class="about-highlight">
+      <p>
+        I am an experienced <strong>IT Specialist</strong>, <strong>Senior Network Engineer</strong>, <strong>Cybersecurity Analyst</strong>, and <strong>University Lecturer</strong> with <strong>six years</strong> of experience and a strong background in designing, implementing, securing, and managing modern IT and network infrastructures. My expertise spans enterprise networking, cybersecurity, network administration, IT infrastructure, system troubleshooting, and technical education.
+      </p>
+      <p>
+        Throughout my professional career, I have worked with a wide range of networking and security technologies, including Cisco routing and switching, firewalls, VLANs, DHCP, NAT, VPNs, wireless networks, network monitoring, network security, and infrastructure management. I am passionate about building reliable, secure, scalable, and high-performance networks while proactively identifying and resolving technical challenges.
+      </p>
+      <p>
+        As a <strong>Cybersecurity Analyst</strong>, I have a strong interest in network security, threat identification, vulnerability assessment, security monitoring, incident analysis, and implementing effective security controls to protect organizational systems and data.
+      </p>
+      <p>
+        Alongside my technical career, I am also a <strong>University Lecturer</strong> and networking instructor, where I share practical and theoretical knowledge with students and aspiring IT professionals. My teaching areas include Computer Networking, CCNA, CCNP concepts, CompTIA A+, Networking Fundamentals, Cybersecurity, and IT technologies. I believe in combining academic knowledge with real-world practical experience to prepare students for professional careers in technology.
+      </p>
+      <p>
+        I am continuously developing my knowledge and skills in network engineering, cybersecurity, cloud technologies, systems administration, and emerging technologies, with a strong commitment to professional growth, innovation, and lifelong learning.
+      </p>
+      <p>
+        My mission is to design secure and reliable technology solutions, solve complex IT challenges, and empower the next generation of technology professionals through practical knowledge and education.
+      </p>
+    </div>
   </section>
 
   <!-- Experience -->
