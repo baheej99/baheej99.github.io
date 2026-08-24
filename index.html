@@ -137,17 +137,23 @@
       cursor: pointer;
     }
 
-    .btn-primary {
+    /* Unified button color – all three primary buttons use the same style */
+    .btn-primary,
+    .btn-doc,
+    .btn-contact {
       background: #3b82f6;
       color: white;
     }
 
-    .btn-primary:hover {
+    .btn-primary:hover,
+    .btn-doc:hover,
+    .btn-contact:hover {
       background: #2563eb;
       transform: translateY(-2px);
       box-shadow: 0 8px 18px rgba(59, 130, 246, 0.4);
     }
 
+    /* outline style for secondary actions */
     .btn-outline {
       background: transparent;
       color: white;
@@ -395,7 +401,6 @@
       pointer-events: none; /* let clicks pass to iframe, but we use JS to block context menu */
     }
 
-    /* We handle right-click on the iframe container via JS */
     .inline-viewer {
       -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -528,10 +533,10 @@
       <a href="resume.pdf" class="btn btn-primary" target="_blank">
         <i class="fas fa-download"></i> Download Resume
       </a>
-      <a href="#documents" class="btn btn-outline">
+      <a href="#documents" class="btn btn-doc">
         <i class="fas fa-folder-open"></i> Document Center
       </a>
-      <a href="#contact" class="btn btn-outline">
+      <a href="#contact" class="btn btn-contact">
         <i class="fas fa-envelope"></i> Contact
       </a>
     </div>
@@ -658,12 +663,12 @@
     </div>
   </section>
 
-  <!-- DOCUMENT CENTER with anti-download & anti-screenshot measures -->
+  <!-- DOCUMENT CENTER with anti-download & anti-screenshot -->
   <section id="documents">
     <h2><i class="fas fa-folder-open" style="color:#3b82f6; margin-right:8px;"></i> Document Center</h2>
     <p style="color:#475569; margin-bottom:24px;">
       <i class="fas fa-lock" style="color:#3b82f6;"></i> 
-      View my certificates, job experience, and ID card online. 
+      View my certificates, educational documents, ID, and more. 
       <span style="background:#f1f5f9; padding:2px 10px; border-radius:20px; font-size:0.85rem; color:#475569;">
         <i class="fas fa-eye-slash"></i> Download &amp; screenshot protected
       </span>
@@ -673,7 +678,7 @@
       <!-- Technical Certificates -->
       <div class="doc-card">
         <h4><i class="fas fa-certificate" style="color:#3b82f6;"></i> Technical Certificates</h4>
-        <p>CCNA, CCNP Fundamentals, Cybersecurity, Cryptography &amp; more</p>
+        <p>CCNA, CCNP, Cybersecurity, Cryptography &amp; more</p>
         <button class="btn-outline-small toggle-viewer" data-target="techCerts"><i class="fas fa-eye"></i> View</button>
         <div id="techCerts" class="inline-viewer hidden-viewer" oncontextmenu="return false;">
           <iframe src="tech-certificates.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Technical Certificates"></iframe>
@@ -689,6 +694,18 @@
         <button class="btn-outline-small toggle-viewer" data-target="engCerts"><i class="fas fa-eye"></i> View</button>
         <div id="engCerts" class="inline-viewer hidden-viewer" oncontextmenu="return false;">
           <iframe src="english-certificates.pdf#toolbar=0&navpanes=0&scrollbar=0" title="English Certificates"></iframe>
+          <div class="viewer-watermark">&#9679; CONFIDENTIAL</div>
+          <div class="viewer-overlay"></div>
+        </div>
+      </div>
+
+      <!-- Educational Documents (NEW) -->
+      <div class="doc-card">
+        <h4><i class="fas fa-graduation-cap" style="color:#3b82f6;"></i> Educational Documents</h4>
+        <p>Bachelor's degree, Associate degree, transcripts &amp; diplomas</p>
+        <button class="btn-outline-small toggle-viewer" data-target="eduDocs"><i class="fas fa-eye"></i> View</button>
+        <div id="eduDocs" class="inline-viewer hidden-viewer" oncontextmenu="return false;">
+          <iframe src="educational-documents.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Educational Documents"></iframe>
           <div class="viewer-watermark">&#9679; CONFIDENTIAL</div>
           <div class="viewer-overlay"></div>
         </div>
@@ -717,9 +734,21 @@
           <div class="viewer-overlay"></div>
         </div>
       </div>
+
+      <!-- Photo & Signature (NEW) -->
+      <div class="doc-card">
+        <h4><i class="fas fa-image" style="color:#3b82f6;"></i> Photo &amp; Signature</h4>
+        <p>Official photo and digital signature</p>
+        <button class="btn-outline-small toggle-viewer" data-target="photoSig"><i class="fas fa-eye"></i> View</button>
+        <div id="photoSig" class="inline-viewer hidden-viewer" oncontextmenu="return false;">
+          <iframe src="photo-signature.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Photo & Signature"></iframe>
+          <div class="viewer-watermark">&#9679; CONFIDENTIAL</div>
+          <div class="viewer-overlay"></div>
+        </div>
+      </div>
     </div>
 
-    <!-- JavaScript for toggling viewer + additional anti-screenshot / right-click protection -->
+    <!-- JavaScript for toggling viewer + anti-screenshot / right-click protection -->
     <script>
       (function() {
         // Toggle viewer visibility
@@ -764,7 +793,6 @@
           }
           // Ctrl+P (print) – blocks print dialog which can be used to "save as PDF"
           if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-            // Only block if focus is inside a document viewer or we want global block
             const active = document.activeElement;
             if (active && active.closest('.inline-viewer')) {
               e.preventDefault();
@@ -854,34 +882,4 @@
       <div class="cert-item"><i class="fas fa-certificate"></i> Introduction to Cyber Security</div>
       <div class="cert-item"><i class="fas fa-certificate"></i> Intro to Cryptography &amp; Network Security</div>
       <div class="cert-item"><i class="fas fa-certificate"></i> English for IT 1 &amp; 2</div>
-      <div class="cert-item"><i class="fas fa-certificate"></i> IT for Business Success</div>
-      <div class="cert-item"><i class="fas fa-certificate"></i> Network Workshop</div>
-      <div class="cert-item"><i class="fas fa-certificate"></i> TEFL 1 &amp; 2 / SLT</div>
-    </div>
-  </section>
-
-  <!-- My Website -->
-  <section>
-    <h2>My Website</h2>
-    <div style="background:white; border-radius:12px; padding:20px 24px; border:1px solid #e2e8f0; display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
-      <i class="fas fa-globe" style="font-size:2rem; color:#3b82f6;"></i>
-      <span style="font-size:1.2rem; font-weight:500;">baheej.xo.je</span>
-      <a href="https://baheej.xo.je" target="_blank" class="btn btn-primary" style="margin-left:auto; padding:10px 24px;">
-        <i class="fas fa-external-link-alt"></i> Visit
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Get In Touch</h2>
-    <div class="contact-box">
-      <p style="color:#475569; margin-bottom:8px;">
-        Feel free to reach out for professional opportunities, collaboration, or academic discussions.
-      </p>
-      <p style="color:#64748b; font-size:0.95rem;">Kabul, Afghanistan</p>
-
-      <div class="contact-links">
-        <a href="mailto:baheej99@gmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i> baheej99@gmail.com
-        </
+      <div class="cert-item"><i class
