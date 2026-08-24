@@ -1,492 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shah Mohammad Baheej | Senior Network Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shah Mohammad Baheej · IT Specialist</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #1e293b;
-            background: #f8fafc;
-        }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background: #f8fafc;
+    }
 
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-            color: white;
-            padding: 70px 20px 80px;
-            text-align: center;
-        }
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      color: white;
+      padding: 70px 20px 80px;
+      text-align: center;
+    }
 
-        .profile-img {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #3b82f6;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
+    .profile-img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3b82f6;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
 
-        .hero h1 {
-            font-size: 2.6rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-        .roles {
-            font-size: 1.15rem;
-            color: #94a3b8;
-            margin-bottom: 18px;
-        }
+    .roles {
+      font-size: 1.15rem;
+      color: #94a3b8;
+      margin-bottom: 18px;
+    }
 
-        .roles span {
-            color: #60a5fa;
-            margin: 0 8px;
-        }
+    .roles span {
+      color: #60a5fa;
+      margin: 0 8px;
+    }
 
-        .hero-desc {
-            max-width: 680px;
-            margin: 0 auto 30px;
-            color: #cbd5e1;
-            font-size: 1.05rem;
-        }
+    .hero-desc {
+      max-width: 680px;
+      margin: 0 auto 30px;
+      color: #cbd5e1;
+      font-size: 1.05rem;
+    }
 
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 26px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
 
-        .btn-primary {
-            background: #3b82f6;
-            color: white;
-        }
+    .btn-primary {
+      background: #3b82f6;
+      color: white;
+    }
 
-        .btn-primary:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-        }
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
 
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid #64748b;
-        }
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid #64748b;
+    }
 
-        .btn-outline:hover {
-            border-color: #3b82f6;
-            color: #60a5fa;
-        }
+    .btn-outline:hover {
+      border-color: #3b82f6;
+      color: #60a5fa;
+    }
 
-        /* Sections */
-        section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+    /* Sections */
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
 
-        h2 {
-            font-size: 1.8rem;
-            color: #0f172a;
-            margin-bottom: 28px;
-            position: relative;
-            padding-bottom: 12px;
-        }
+    h2 {
+      font-size: 1.8rem;
+      color: #0f172a;
+      margin-bottom: 28px;
+      position: relative;
+      padding-bottom: 12px;
+    }
 
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 55px;
-            height: 3px;
-            background: #3b82f6;
-            border-radius: 2px;
-        }
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 55px;
+      height: 3px;
+      background: #3b82f6;
+      border-radius: 2px;
+    }
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-            margin-bottom: 18px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+      margin-bottom: 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08);
-        }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+    }
 
-        .card h3 {
-            font-size: 1.2rem;
-            color: #1e40af;
-            margin-bottom: 6px;
-        }
+    .card h3 {
+      font-size: 1.2rem;
+      color: #1e40af;
+      margin-bottom: 6px;
+    }
 
-        .card .meta {
-            font-size: 0.92rem;
-            color: #64748b;
-            margin-bottom: 10px;
-        }
+    .card .meta {
+      font-size: 0.92rem;
+      color: #64748b;
+      margin-bottom: 10px;
+    }
 
-        .card p, .card li {
-            color: #475569;
-            font-size: 0.95rem;
-        }
+    .card p,
+    .card li {
+      color: #475569;
+      font-size: 0.95rem;
+    }
 
-        .card ul {
-            margin-left: 18px;
-            margin-top: 8px;
-        }
+    .card ul {
+      margin-left: 18px;
+      margin-top: 8px;
+    }
 
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-        }
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
 
-        .skill-item {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
-            text-align: center;
-        }
+    .skill-item {
+      background: white;
+      padding: 20px 16px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
 
-        .skill-item i {
-            font-size: 1.7rem;
-            color: #3b82f6;
-            margin-bottom: 10px;
-        }
+    .skill-item i {
+      font-size: 1.7rem;
+      color: #3b82f6;
+      margin-bottom: 10px;
+    }
 
-        .skill-item h4 {
-            font-size: 1.05rem;
-            margin-bottom: 6px;
-            color: #1e293b;
-        }
+    .skill-item h4 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: #1e293b;
+    }
 
-        .skill-item p {
-            font-size: 0.88rem;
-            color: #64748b;
-        }
+    .skill-item p {
+      font-size: 0.88rem;
+      color: #64748b;
+    }
 
-        /* Certificates */
-        .certs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 14px;
-        }
+    /* Certificates */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
 
-        .cert-item {
-            background: white;
-            padding: 16px 18px;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    .cert-item {
+      background: white;
+      padding: 16px 18px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-        .cert-item i {
-            color: #3b82f6;
-            font-size: 1.2rem;
-        }
+    .cert-item i {
+      color: #3b82f6;
+      font-size: 1.2rem;
+    }
 
-        /* Contact */
-        .contact-box {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-            text-align: center;
-        }
+    /* Document viewer (PDF inline) */
+    .doc-viewer {
+      background: #f1f5f9;
+      border-radius: 12px;
+      padding: 12px;
+      margin-top: 12px;
+    }
 
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 14px;
-            margin-top: 25px;
-        }
+    .doc-viewer iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+      border-radius: 8px;
+      background: white;
+    }
 
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #f1f5f9;
-            color: #1e40af;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
 
-        .contact-link:hover {
-            background: #3b82f6;
-            color: white;
-        }
+    .doc-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid #e2e8f0;
+      transition: 0.2s;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #94a3b8;
-            font-size: 0.9rem;
-            border-top: 1px solid #e2e8f0;
-        }
+    .doc-card:hover {
+      box-shadow: 0 8px 16px -6px rgba(0, 0, 0, 0.08);
+    }
 
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.1rem; }
-            .profile-img { width: 140px; height: 140px; }
-            section { padding: 40px 20px; }
-        }
-    </style>
+    .doc-card h4 {
+      color: #1e40af;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .doc-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .doc-card .btn-outline-small {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 6px;
+      border: 1px solid #3b82f6;
+      color: #3b82f6;
+      background: transparent;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .doc-card .btn-outline-small:hover {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .inline-viewer {
+      margin-top: 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .inline-viewer iframe {
+      width: 100%;
+      height: 280px;
+      border: none;
+      display: block;
+    }
+
+    /* Contact */
+    .contact-box {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f1f5f9;
+      color: #1e40af;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .contact-link:hover {
+      background: #3b82f6;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+      .profile-img {
+        width: 140px;
+        height: 140px;
+      }
+      section {
+        padding: 40px 20px;
+      }
+      .doc-viewer iframe {
+        height: 240px;
+      }
+      .inline-viewer iframe {
+        height: 200px;
+      }
+    }
+
+    /* toggle visibility */
+    .viewer-toggle {
+      margin-top: 10px;
+    }
+    .hidden-viewer {
+      display: none;
+    }
+    .doc-card .btn-outline-small i {
+      margin-right: 4px;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Hero -->
-    <header class="hero">
-        <img src="profile.jpg" alt="Shah Mohammad Baheej" class="profile-img">
-        
-        <h1>Shah Mohammad Baheej</h1>
-        
-        <div class="roles">
-            Network Specialist <span>•</span> Network Engineer <span>•</span> University Lecturer
-        </div>
-        
-        <p class="hero-desc">
-            Network Specialist and University Lecturer with over 5 years of progressive experience in network administration, 
-            IT infrastructure management, and academic instruction. Specialized in designing secure, scalable enterprise networks.
-        </p>
-        
-        <div class="hero-buttons">
-            <a href="resume.pdf" class="btn btn-primary" target="_blank">
-                <i class="fas fa-download"></i> Download Resume
-            </a>
-            <a href="#contact" class="btn btn-outline">
-                <i class="fas fa-envelope"></i> Contact Me
-            </a>
-        </div>
-    </header>
+  <!-- Hero -->
+  <header class="hero">
+    <img src="profile.jpg" alt="Shah Mohammad Baheej" class="profile-img" />
+    <h1>Shah Mohammad Baheej</h1>
+    <div class="roles">
+      IT Specialist <span>•</span> Senior Network Engineer <span>•</span> Cybersecurity Analyst <span>•</span> University Lecturer
+    </div>
+    <p class="hero-desc">
+      Network Specialist and University Lecturer with over 5 years of progressive experience in network administration,
+      IT infrastructure management, and academic instruction. Specialized in designing secure, scalable enterprise networks.
+    </p>
+    <div class="hero-buttons">
+      <a href="resume.pdf" class="btn btn-primary" target="_blank">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+      <a href="#documents" class="btn btn-outline">
+        <i class="fas fa-folder-open"></i> Document Center
+      </a>
+      <a href="#contact" class="btn btn-outline">
+        <i class="fas fa-envelope"></i> Contact
+      </a>
+    </div>
+  </header>
 
-    <!-- About -->
-    <section>
-        <h2>About Me</h2>
-        <p style="color:#475569; font-size:1.05rem; margin-bottom:14px;">
-            I am a Network Specialist and University Lecturer with more than 5 years of experience in designing, implementing, 
-            and maintaining secure and high-performance network systems. I have worked across service providers, 
-            research institutions, and higher education sectors.
-        </p>
-        <p style="color:#475569; font-size:1.05rem;">
-            Currently working as a Network Specialist at RDR MOD while also serving as a University Lecturer at Jahan University, 
-            bringing real-world industry experience into the classroom.
-        </p>
-    </section>
+  <!-- About -->
+  <section>
+    <h2>About Me</h2>
+    <p style="color:#475569; font-size:1.05rem; margin-bottom:14px;">
+      I am a Network Specialist and University Lecturer with more than 5 years of experience in designing, implementing,
+      and maintaining secure and high-performance network systems. I have worked across service providers,
+      research institutions, and higher education sectors.
+    </p>
+    <p style="color:#475569; font-size:1.05rem;">
+      Currently working as a Network Specialist at RDR MOD while also serving as a University Lecturer at Jahan University,
+      bringing real-world industry experience into the classroom.
+    </p>
+  </section>
 
-    <!-- Experience -->
-    <section>
-        <h2>Professional Experience</h2>
+  <!-- Experience -->
+  <section>
+    <h2>Professional Experience</h2>
 
-        <!-- Current Role -->
-        <div class="card">
-            <h3>Network Specialist</h3>
-            <div class="meta">RDR MOD • July 2026 – Present</div>
-            <ul>
-                <li>Designing, implementing, and maintaining secure and high-availability network infrastructure</li>
-                <li>Configuring and managing enterprise routers, switches, firewalls, and wireless systems</li>
-                <li>Implementing network security policies, access control, and monitoring solutions</li>
-                <li>Troubleshooting complex network issues and ensuring continuous operational readiness</li>
-                <li>Supporting critical network services and coordinating with technical teams for infrastructure upgrades</li>
-                <li>Documenting network configurations, procedures, and security standards</li>
-            </ul>
+    <div class="card">
+      <h3>Network Specialist</h3>
+      <div class="meta">RDR MOD • July 2026 – Present</div>
+      <ul>
+        <li>Designing, implementing, and maintaining secure and high-availability network infrastructure</li>
+        <li>Configuring and managing enterprise routers, switches, firewalls, and wireless systems</li>
+        <li>Implementing network security policies, access control, and monitoring solutions</li>
+        <li>Troubleshooting complex network issues and ensuring continuous operational readiness</li>
+        <li>Supporting critical network services and coordinating with technical teams for infrastructure upgrades</li>
+        <li>Documenting network configurations, procedures, and security standards</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>University Lecturer</h3>
+      <div class="meta">Jahan University, Kabul • Feb 2026 – Present (Part-time)</div>
+      <ul>
+        <li>Teaching Network Routing & Switching, Network Security, and Cisco CCNA courses</li>
+        <li>Delivering theoretical and practical lab training on TCP/IP, subnetting, VLANs, and routing protocols</li>
+        <li>Preparing course materials, conducting assessments, and guiding student projects</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Network Engineer</h3>
+      <div class="meta">Technical and Technology Research Administration (TTRA) • April 2022 – June 2025</div>
+      <ul>
+        <li>Designed, implemented, and managed LAN/WAN infrastructure including routers, switches, firewalls, and wireless networks</li>
+        <li>Configured Cisco, MikroTik, Starlink, and next-generation firewall solutions</li>
+        <li>Implemented routing protocols (OSPF, EIGRP, BGP) and site-to-site VPNs</li>
+        <li>Deployed IP telephony solutions and large-scale CCTV surveillance systems</li>
+        <li>Led technical teams during network deployments and infrastructure upgrades</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Network Support Engineer</h3>
+      <div class="meta">Sky Connect Internet Service Company • Jan 2021 – Feb 2022</div>
+      <ul>
+        <li>Installed, configured, and troubleshot routers, switches, firewalls, and PtP links</li>
+        <li>Managed Cisco and MikroTik devices in ISP environments</li>
+        <li>Configured VLANs, NAT, DHCP, DNS, VPN, and firewall policies</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <h3>Bachelor Degree in Information Technology (IT)</h3>
+      <div class="meta">Jahan University • 2019 – 2022</div>
+    </div>
+    <div class="card">
+      <h3>Associate's Degree in Engineering</h3>
+      <div class="meta">TTTA • 2016 – 2017</div>
+    </div>
+    <div class="card">
+      <h3>Diploma in English Language</h3>
+      <div class="meta">Kabul Center Institute (KCI) • 2022</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Key Projects</h2>
+
+    <div class="card">
+      <h3>Enterprise Network Design & Deployment – TTRA</h3>
+      <div class="meta">Network Engineer • Supporting 300+ users</div>
+      <p>Designed and deployed complete enterprise network infrastructure using fiber optic backbone, Cisco routers (3850/3650/3750), ASA 5545 firewall, 30 wireless access points, and 50 Cisco IP phones. Implemented VLANs, routing protocols (RIP, OSPF, EIGRP), and security best practices.</p>
+    </div>
+
+    <div class="card">
+      <h3>CCTV Surveillance System – TTRA</h3>
+      <div class="meta">100 Network Cameras + Biometric System</div>
+      <p>Designed and deployed a large-scale IP-based CCTV system with 100 cameras across multiple locations and 5 monitoring rooms for centralized security management.</p>
+    </div>
+
+    <div class="card">
+      <h3>Network Scalability in IoT Deployments</h3>
+      <div class="meta">Research Project • Jahan University</div>
+      <p>Conducted research on network scalability challenges in large-scale IoT environments, focusing on congestion, device management, addressing, interoperability, and security.</p>
+    </div>
+
+    <!-- NEW 4th PROJECT -->
+    <div class="card">
+      <h3>Master Plan & Enterprise Network Design – RDRMOD</h3>
+      <div class="meta">Network Specialist • RDR MOD</div>
+      <p>Developed a comprehensive master plan and enterprise network architecture for RDRMOD, including high-availability design, security zones, unified communication, and scalable infrastructure to support mission-critical operations.</p>
+    </div>
+  </section>
+
+  <!-- DOCUMENT CENTER (NEW SECTION) -->
+  <section id="documents">
+    <h2><i class="fas fa-folder-open" style="color:#3b82f6; margin-right:8px;"></i> Document Center</h2>
+    <p style="color:#475569; margin-bottom:24px;">View my certificates, job experience documents, and ID card online. (PDF viewer – no download required)</p>
+
+    <div class="doc-grid">
+      <!-- Technical Certificates -->
+      <div class="doc-card">
+        <h4><i class="fas fa-certificate" style="color:#3b82f6;"></i> Technical Certificates</h4>
+        <p>CCNA, CCNP Fundamentals, Cybersecurity, Cryptography & more</p>
+        <button class="btn-outline-small toggle-viewer" data-target="techCerts"><i class="fas fa-eye"></i> View</button>
+        <div id="techCerts" class="inline-viewer hidden-viewer">
+          <iframe src="tech-certificates.pdf#toolbar=0" title="Technical Certificates"></iframe>
         </div>
+      </div>
 
-        <div class="card">
-            <h3>University Lecturer</h3>
-            <div class="meta">Jahan University, Kabul • Feb 2026 – Present (Part-time)</div>
-            <ul>
-                <li>Teaching Network Routing & Switching, Network Security, and Cisco CCNA courses</li>
-                <li>Delivering theoretical and practical lab training on TCP/IP, subnetting, VLANs, and routing protocols</li>
-                <li>Preparing course materials, conducting assessments, and guiding student projects</li>
-            </ul>
+      <!-- English Certificates -->
+      <div class="doc-card">
+        <h4><i class="fas fa-language" style="color:#3b82f6;"></i> English Certificates</h4>
+        <p>English for IT 1&2, TEFL 1&2, SLT, KCI Diploma</p>
+        <button class="btn-outline-small toggle-viewer" data-target="engCerts"><i class="fas fa-eye"></i> View</button>
+        <div id="engCerts" class="inline-viewer hidden-viewer">
+          <iframe src="english-certificates.pdf#toolbar=0" title="English Certificates"></iframe>
         </div>
+      </div>
 
-        <div class="card">
-            <h3>Network Engineer</h3>
-            <div class="meta">Technical and Technology Research Administration (TTRA) • April 2022 – June 2025</div>
-            <ul>
-                <li>Designed, implemented, and managed LAN/WAN infrastructure including routers, switches, firewalls, and wireless networks</li>
-                <li>Configured Cisco, MikroTik, Starlink, and next-generation firewall solutions</li>
-                <li>Implemented routing protocols (OSPF, EIGRP, BGP) and site-to-site VPNs</li>
-                <li>Deployed IP telephony solutions and large-scale CCTV surveillance systems</li>
-                <li>Led technical teams during network deployments and infrastructure upgrades</li>
-            </ul>
+      <!-- Job Experience -->
+      <div class="doc-card">
+        <h4><i class="fas fa-briefcase" style="color:#3b82f6;"></i> Job Experience</h4>
+        <p>Employment letters, reference documents, and experience records</p>
+        <button class="btn-outline-small toggle-viewer" data-target="jobExp"><i class="fas fa-eye"></i> View</button>
+        <div id="jobExp" class="inline-viewer hidden-viewer">
+          <iframe src="job-experience.pdf#toolbar=0" title="Job Experience"></iframe>
         </div>
+      </div>
 
-        <div class="card">
-            <h3>Network Support Engineer</h3>
-            <div class="meta">Sky Connect Internet Service Company • Jan 2021 – Feb 2022</div>
-            <ul>
-                <li>Installed, configured, and troubleshot routers, switches, firewalls, and PtP links</li>
-                <li>Managed Cisco and MikroTik devices in ISP environments</li>
-                <li>Configured VLANs, NAT, DHCP, DNS, VPN, and firewall policies</li>
-            </ul>
+      <!-- National ID Card -->
+      <div class="doc-card">
+        <h4><i class="fas fa-id-card" style="color:#3b82f6;"></i> National ID Card</h4>
+        <p>Official identification document</p>
+        <button class="btn-outline-small toggle-viewer" data-target="nationalId"><i class="fas fa-eye"></i> View</button>
+        <div id="nationalId" class="inline-viewer hidden-viewer">
+          <iframe src="national-id.pdf#toolbar=0" title="National ID Card"></iframe>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Education -->
-    <section>
-        <h2>Education</h2>
-        <div class="card">
-            <h3>Bachelor Degree in Information Technology (IT)</h3>
-            <div class="meta">Jahan University • 2019 – 2022</div>
-        </div>
-        <div class="card">
-            <h3>Associate's Degree in Engineering</h3>
-            <div class="meta">TTTA • 2016 – 2017</div>
-        </div>
-        <div class="card">
-            <h3>Diploma in English Language</h3>
-            <div class="meta">Kabul Center Institute (KCI) • 2022</div>
-        </div>
-    </section>
+    <!-- hidden viewer toggle script (inline) -->
+    <script>
+      (function() {
+        const toggles = document.querySelectorAll('.toggle-viewer');
+        toggles.forEach(btn => {
+          btn.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('data-target');
+            const viewer = document.getElementById(targetId);
+            if (viewer) {
+              viewer.classList.toggle('hidden-viewer');
+              // change button text
+              if (viewer.classList.contains('hidden-viewer')) {
+                this.innerHTML = '<i class="fas fa-eye"></i> View';
+              } else {
+                this.innerHTML = '<i class="fas fa-eye-slash"></i> Hide';
+              }
+            }
+          });
+        });
+      })();
+    </script>
+  </section>
 
-    <!-- Projects -->
-    <section>
-        <h2>Key Projects</h2>
+  <!-- Technical Skills (updated) -->
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <i class="fas fa-network-wired"></i>
+        <h4>Routing & Switching</h4>
+        <p>OSPF, EIGRP, BGP, RIP, VLANs, Layer 3</p>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Network Security</h4>
+        <p>Firewall, VPN, Cisco ASA, Endpoint</p>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-server"></i>
+        <h4>Infrastructure</h4>
+        <p>Cisco, MikroTik, Starlink, Virtualization</p>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-phone"></i>
+        <h4>IP Telephony</h4>
+        <p>Cisco IP Phones, VoIP Solutions</p>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-video"></i>
+        <h4>Surveillance</h4>
+        <p>CCTV Design, Biometric Systems</p>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h4>Teaching</h4>
+        <p>CCNA, Network Security, Lab</p>
+      </div>
+      <!-- NEW SKILLS -->
+      <div class="skill-item">
+        <i class="fas fa-code"></i>
+        <h4>Web Development</h4>
+        <p>HTML, CSS, JavaScript, React</p>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-shield-virus"></i>
+        <h4>Cybersecurity Tools</h4>
+        <p>Wireshark, Nmap, Metasploit, SIEM</p>
+      </div>
+      <div class="skill-item">
+        <i class="fab fa-python"></i>
+        <h4>Python</h4>
+        <p>Automation, Scripting, Network tools</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="card">
-            <h3>Enterprise Network Design & Deployment – TTRA</h3>
-            <div class="meta">Network Engineer • Supporting 300+ users</div>
-            <p>Designed and deployed complete enterprise network infrastructure using fiber optic backbone, Cisco routers (3850/3650/3750), ASA 5545 firewall, 30 wireless access points, and 50 Cisco IP phones. Implemented VLANs, routing protocols (RIP, OSPF, EIGRP), and security best practices.</p>
-        </div>
+  <!-- Certificates (list) -->
+  <section>
+    <h2>Certificates</h2>
+    <div class="certs-grid">
+      <div class="cert-item"><i class="fas fa-certificate"></i> CCNA</div>
+      <div class="cert-item"><i class="fas fa-certificate"></i> CCNP Fundamentals</div>
+      <div class="cert-item"><i class="fas fa-certificate"></i> Introduction to Cyber Security</div>
+      <div class="cert-item"><i class="fas fa-certificate"></i> Intro to Cryptography & Network Security</div>
+      <div class="cert-item"><i class="fas fa-certificate"></i> English for IT 1 & 2</div>
+      <div class="cert-item"><i class="fas fa-certificate"></i> IT for Business Success</div>
+      <div class="cert-item"><i class="fas fa-certificate"></i> Network Workshop</div>
+      <div class="cert-item"><i class="fas fa-certificate"></i> TEFL 1 & 2 / SLT</div>
+    </div>
+  </section>
 
-        <div class="card">
-            <h3>CCTV Surveillance System – TTRA</h3>
-            <div class="meta">100 Network Cameras + Biometric System</div>
-            <p>Designed and deployed a large-scale IP-based CCTV system with 100 cameras across multiple locations and 5 monitoring rooms for centralized security management.</p>
-        </div>
+  <!-- Website link (baheej.xo.je) -->
+  <section>
+    <h2>My Website</h2>
+    <div style="background:white; border-radius:12px; padding:20px 24px; border:1px solid #e2e8f0; display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+      <i class="fas fa-globe" style="font-size:2rem; color:#3b82f6;"></i>
+      <span style="font-size:1.2rem; font-weight:500;">baheej.xo.je</span>
+      <a href="https://baheej.xo.je" target="_blank" class="btn btn-primary" style="margin-left:auto; padding:10px 24px;">
+        <i class="fas fa-external-link-alt"></i> Visit
+      </a>
+    </div>
+  </section>
 
-        <div class="card">
-            <h3>Network Scalability in IoT Deployments</h3>
-            <div class="meta">Research Project • Jahan University</div>
-            <p>Conducted research on network scalability challenges in large-scale IoT environments, focusing on congestion, device management, addressing, interoperability, and security.</p>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-box">
+      <p style="color:#475569; margin-bottom:8px;">
+        Feel free to reach out for professional opportunities, collaboration, or academic discussions.
+      </p>
+      <p style="color:#64748b; font-size:0.95rem;">Kabul, Afghanistan</p>
 
-    <!-- Skills -->
-    <section>
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <i class="fas fa-network-wired"></i>
-                <h4>Routing & Switching</h4>
-                <p>OSPF, EIGRP, BGP, RIP, VLANs, Layer 3</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-shield-alt"></i>
-                <h4>Network Security</h4>
-                <p>Firewall, VPN, Cisco ASA, Endpoint Security</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-server"></i>
-                <h4>Infrastructure</h4>
-                <p>Cisco, MikroTik, Starlink, Virtualization</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-phone"></i>
-                <h4>IP Telephony</h4>
-                <p>Cisco IP Phones, VoIP Solutions</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-video"></i>
-                <h4>Surveillance Systems</h4>
-                <p>CCTV Design & Deployment, Biometric</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-chalkboard-teacher"></i>
-                <h4>Teaching</h4>
-                <p>CCNA, Network Security, Lab Instruction</p>
-            </div>
-        </div>
-    </section>
+      <div class="contact-links">
+        <a href="mailto:baheej99@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i> baheej99@gmail.com
+        </a>
+        <a href="https://wa.me/93779295935" class="contact-link" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="tel:+93779295935" class="contact-link">
+          <i class="fas fa-phone"></i> +93 779 295 935
+        </a>
+        <a href="https://www.linkedin.com/in/shah-mohammad-baheej-a61559404" class="contact-link" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.facebook.com/Shahmohammad.Baheej" class="contact-link" target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://baheej99.github.io" class="contact-link" target="_blank">
+          <i class="fas fa-globe"></i> GitHub.io
+        </a>
+        <a href="https://baheej.xo.je" class="contact-link" target="_blank">
+          <i class="fas fa-globe"></i> baheej.xo.je
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Certificates -->
-    <section>
-        <h2>Certificates</h2>
-        <div class="certs-grid">
-            <div class="cert-item"><i class="fas fa-certificate"></i> CCNA</div>
-            <div class="cert-item"><i class="fas fa-certificate"></i> CCNP Fundamentals</div>
-            <div class="cert-item"><i class="fas fa-certificate"></i> Introduction to Cyber Security</div>
-            <div class="cert-item"><i class="fas fa-certificate"></i> Introduction to Cryptography & Network Security</div>
-            <div class="cert-item"><i class="fas fa-certificate"></i> English for IT 1 & 2</div>
-            <div class="cert-item"><i class="fas fa-certificate"></i> IT for Business Success</div>
-            <div class="cert-item"><i class="fas fa-certificate"></i> Network Workshop</div>
-            <div class="cert-item"><i class="fas fa-certificate"></i> TEFL 1 & 2 / SLT</div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-box">
-            <p style="color:#475569; margin-bottom:8px;">
-                Feel free to reach out for professional opportunities, collaboration, or academic discussions.
-            </p>
-            <p style="color:#64748b; font-size:0.95rem;">Kabul, Afghanistan</p>
-            
-            <div class="contact-links">
-                <a href="mailto:baheej99@gmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i> baheej99@gmail.com
-                </a>
-                <a href="https://wa.me/93779295935" class="contact-link" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="tel:+93779295935" class="contact-link">
-                    <i class="fas fa-phone"></i> +93 779 295 935
-                </a>
-                <a href="https://www.linkedin.com/in/shah-mohammad-baheej-a61559404" class="contact-link" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://www.facebook.com/Shahmohammad.Baheej" class="contact-link" target="_blank">
-                    <i class="fab fa-facebook"></i> Facebook
-                </a>
-                <a href="https://baheej99.github.io" class="contact-link" target="_blank">
-                    <i class="fas fa-globe"></i> Website
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        © 2026 Shah Mohammad Baheej — Network Specialist | Network Engineer | University Lecturer
-    </footer>
+  <footer>
+    © 2026 Shah Mohammad Baheej — IT Specialist | Senior Network Engineer | Cybersecurity Analyst | University Lecturer
+  </footer>
 
 </body>
 </html>
